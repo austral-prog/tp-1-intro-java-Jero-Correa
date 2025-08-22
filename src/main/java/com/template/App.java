@@ -100,12 +100,17 @@ public class App {
     // 12. Find the Largest Element in a List
     // (Encontrar el elemento más grande en una lista)
     public int findMax(List<Integer> list) {
+        if (list == null || list.isEmpty()) {
+            throw new IllegalArgumentException("La lista no puede estar vacía");
+        }
+
         int max = Integer.MIN_VALUE;
         for (int num : list) {
             if (num > max) max = num;
         }
         return max;
     }
+
 
     // 13. Filter Even Numbers from a List
     // (Filtrar números pares de una lista)
